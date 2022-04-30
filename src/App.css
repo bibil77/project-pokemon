@@ -1,38 +1,55 @@
 .App {
-  text-align: center;
+  height: 100vh;
+  /* width: 100%; */
+  display: flex;
+  /* justify-content: space-between; */
+  /* margin: 0 50% 0 50%; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.leftSection{
+  background-color: aquamarine;
+  flex: 0.25;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.centerSection{
+  background-color: blueviolet;
+  flex: 0.5;
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.mainCarteDiv{
+  background-image: url(./assets/img/firePokemonCard.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /* position: relative; */
+  /* z-index: 3; */
+  background-color: aqua;
+  margin-top: 60px;
+  height: 75%;
+  width: 45%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.test{
+  position: absolute;
+  /* z-index: 2; */
+  right: 600px;
+}
+
+.imgCenterMainCard{
+  position: absolute;
+  z-index: 1;
+  /* height: 70%; */
+  /* width: 100%; */
+}
+
+.divCenterBtnDown{
+  background-color: brown;
+}
+
+.rightSection{
+  flex: 0.25;
+  background-color: bisque;
 }
