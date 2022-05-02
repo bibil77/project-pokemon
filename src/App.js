@@ -8,7 +8,7 @@ import { useState } from 'react';
 import firePokemonCard from './assets/img/firePokemonCard.jpg'
 
 function App() {
-  const [number, setNumber] = useState(null)
+  const [number, setNumber] = useState(0)
   const [text, setText] = useState(null)
   return (
     <div className="App">
@@ -32,7 +32,7 @@ function App() {
       <section className='centerSection'>
         {/* div contenant la carte */}
         <div className='mainCarteDiv'>
-          <p className='test'>carte centre</p>
+          <p className='test'>PV {number}</p>
           {/* <img className='imgCenterMainCard' src={firePokemonCard} /> */}
         </div>
 
@@ -45,6 +45,7 @@ function App() {
       {/* section droite contenant toute la palette de modification de la carte */}
       <section className='rightSection'>
         section droite
+        <TextNb number={number} value={0} setNumber={setNumber} placeholder="only number"/>
       </section>
     </div>
   );
