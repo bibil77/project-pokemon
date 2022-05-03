@@ -32,12 +32,24 @@
   width: 45%;
 }
 
-.test{
-  position: absolute;
+.pv{
+  /* position: relative; */
   /* z-index: 2; */
-  margin: 15px 0px 0px 0px;
-  right: 616px;
+  margin: 15px 13px 0px 0px;
+  /* right: 616px; */
+  float: right;
   font-size: 20px;
+}
+
+.EnergyBallFaiblesse{
+  /* position: sticky; */
+  /* right: 800px; */
+  /* top: 480px; */
+  /* bottom: 50px; */
+  float: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 17px;
 }
 
 .imgCenterMainCard{

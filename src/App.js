@@ -3,18 +3,20 @@ import './App.css';
 import TextNb from './components/TextNb';
 import Text from './components/Text';
 import { useRef, useState } from 'react';
-import { findDOMNode } from 'react-dom';
-import $ from 'jquery';
 import html2canvas from 'html2canvas';
 
 // importation d'image
 import firePokemonCard from './assets/img/firePokemonCard.jpg'
+import SelectEnergy from './components/SelectEnergy';
+import SelectEnergyMulti from './components/SelectEnergyMulti';
 
 function App() {
   const [number, setNumber] = useState(0)
   const [text, setText] = useState(null)
+  const [energyBall, setEnergyBall] = useState(null)
+  const [energyBallMulti, setEnergyBallMulti] = useState([])
   
-  //script pour télécharger ce qu'il y a dans la div mainCardDiv
+  //--------script pour télécharger ce qu'il y a dans la div mainCardDiv----------------------------------------------
   const printRef = useRef();
 
   const downloadImage = async () => {
@@ -35,6 +37,7 @@ function App() {
       window.open(data);
     }
   };
+// -----------------------------------------------------------------------------------------------------------
 
   return (
     <div className="App">
@@ -60,8 +63,9 @@ function App() {
 
         {/* div contenant la carte */}
         <div className='mainCarteDiv' ref={printRef}>
-          <p className='test'>PV {number}</p>
+          <p className='pv'>PV {number}</p>
           {/* <img className='imgCenterMainCard' src={firePokemonCard} /> */}
+        <img src={energyBall} width={30} height={30} className="EnergyBallFaiblesse" />
         </div>
 
         {/* div contenant les boutons de partage et d'enregistrement*/}
@@ -75,7 +79,18 @@ function App() {
       <section className='rightSection'>
         section droite
         <TextNb number={number} value={0} setNumber={setNumber} placeholder="only number"/>
+        <SelectEnergy energyBall={energyBall} setEnergyBall={setEnergyBall} />
+
+        {/* <SelectEnergyMulti energyBallMulti={energyBallMulti} setEnergyBallMulti={setEnergyBallMulti} />
+        <img src={energyBallMulti[0]} width={30} height={30} style={{borderRadius: 17}} />
+        <img src={energyBallMulti[1]} width={30} height={30} style={{borderRadius: 17}} /> */}
       </section>
+
+
+      
+    
+    
+    
     </div>
   );
 }
