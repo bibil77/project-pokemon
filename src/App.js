@@ -48,13 +48,15 @@ function App() {
       </div>
 
       <div>
-        <p>{text}</p>
-        <Text text={text} setText={setText} placeholder="only text" />
-      </div> */}
+      <p>{text}</p>
+      <Text text={text} setText={setText} placeholder="only text" />
+    </div> */}
 
       {/* section de gauche contenant les template et carte recente */}
       <section className='leftSection'>
       section gauche
+    <TextNb number={number} value={0} setNumber={setNumber} placeholder="only number"/>
+    <SelectEnergy energyBall={energyBall} setEnergyBall={setEnergyBall} />
       </section>
 
 
@@ -75,11 +77,61 @@ function App() {
         </div>
       </section>
 
+{/* ##################################################################################################################" */}
       {/* section droite contenant toute la palette de modification de la carte */}
       <section className='rightSection'>
-        section droite
-        <TextNb number={number} value={0} setNumber={setNumber} placeholder="only number"/>
-        <SelectEnergy energyBall={energyBall} setEnergyBall={setEnergyBall} />
+        {/*partie remplissage des stats de la carte*/}
+        <div className='titre-droite'>
+            <h2>Spécificités</h2>
+          </div>
+          
+          <div className='bloc-spe'>
+
+              <div className='nom-carte'>
+                <h3>Nom de la carte</h3>
+              </div>
+
+              <div className='pv-right-section'>
+                <h3>Point de Vie</h3>
+              </div>
+
+              <div className='type-pokemon'>
+                <h3>Type du Pokemon</h3>
+              </div>
+
+              <div className='atk'>
+                <h3>Attaque</h3>
+              </div>
+
+              <div className='bas-carte'>
+                <h3>Bas de la carte</h3>
+              </div> 
+
+          </div>
+
+          <div className='bloc-spe'>
+
+              <div className='nom-carte'>
+                <h3>Nom de la carte</h3>
+              </div>
+
+              <div className='pv-right-section'>
+                <h3>Point de Vie</h3>
+              </div>
+
+              <div className='type-pokemon'>
+                <h3>Type du Pokemon</h3>
+              </div>
+
+              <div className='atk'>
+                <h3>Attaque</h3>
+              </div>
+
+              <div className='bas-carte'>
+                <h3>Bas de la carte</h3>
+              </div> 
+
+          </div>
 
         {/* <SelectEnergyMulti energyBallMulti={energyBallMulti} setEnergyBallMulti={setEnergyBallMulti} />
         <img src={energyBallMulti[0]} width={30} height={30} style={{borderRadius: 17}} />

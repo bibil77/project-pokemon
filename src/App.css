@@ -1,5 +1,8 @@
+/* importation police d'écriture pokemon */
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid%27');
+
 .App {
-  height: 100vh;
+  height: 100%;
   /* width: 100%; */
   display: flex;
   /* justify-content: space-between; */
@@ -9,11 +12,13 @@
 .leftSection{
   background-color: aquamarine;
   flex: 0.25;
+  /* width: 25%; */
 }
 
 .centerSection{
   background-color: blueviolet;
   flex: 0.5;
+  /* width: 50%; */
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -63,7 +68,83 @@
   background-color: brown;
 }
 
+
+/* #################### RIGHT SECTION ##################################################################################################### */
 .rightSection{
   flex: 0.25;
+  /* width: 25%; */
+  /* width: 384px; */
   background-color: bisque;
+  overflow-y: scroll;
+}
+
+/* .titre-droite{ */
+  /* position: fixed; */
+  /* width: 100%; */
+  
+  /* text-align: center; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* margin-left: 68%; */
+  /* border: 1px solid black; */
+  /* background-color: #ED1C24; */
+  /* font-family: 'Pokemon Solid'; */
+  /* width: 72vh; */
+  /* height: 15%; */
+  /* align-items: center; */
+/* } */
+
+.titre-droite{
+  position: fixed;
+  height: 15%;
+  width: 25%;
+  text-align: center;
+  background-color: #ED1C24;
+  font-family: 'Pokemon Solid';
+  border: 1px solid black;
+  /* padding: 10% 0 10% 0; */
+}
+
+h2{
+  margin: 0;
+}
+
+.bloc-spe{
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+  margin-top: 28.2%;
+  /* margin-left: 68%; */
+  padding-top: 5%;
+  padding-left: 15px;
+  border: 1px solid black;
+
+}
+
+
+.nom-carte{
+  border-bottom: 1px solid black;
+  font-family: 'Pokemon Solid';
+}
+
+
+.pv-right-section{
+  border-bottom: 1px solid black;
+  font-family: 'Pokemon Solid';
+}
+
+
+.type-pokemon{
+  border-bottom: 1px solid black;
+  font-family: 'Pokemon Solid';
+}
+
+
+.atk{
+  border-bottom: 1px solid black;
+  font-family: 'Pokemon Solid';
+}
+
+.bas-carte{
+  font-family: 'Pokemon Solid';
 }
