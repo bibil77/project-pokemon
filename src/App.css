@@ -37,21 +37,40 @@
   width: 45%;
 }
 
-.pv{
+.headerCardMain{
+  display: flex;
+  /* background-color: aliceblue; */
+  /* opacity: 0.3; */
+  height: 13.5%;
+}
+
+
+.cardName{
+  width: 35%;
   /* position: relative; */
-  /* z-index: 2; */
-  margin: 15px 13px 0px 0px;
-  /* right: 616px; */
-  float: right;
+  margin: 4.9% 0 0 23.5%;
+  /* left: 20%; */
+  /* padding: 4.9% 0 0 23.5%; */
   font-size: 20px;
 }
 
-.EnergyBallFaiblesse{
-  /* position: sticky; */
-  /* right: 800px; */
-  /* top: 480px; */
-  /* bottom: 50px; */
-  float: right;
+.pPv{
+  position: relative;
+  /* margin: 0; */
+  margin: 5.5% 0 0 16%;
+  /* padding: 4.9% 0 0 20%; */
+  font-size: 17px;
+}
+
+.pv{
+  font-size: 10px;
+}
+
+.EnergyBallType{
+  position: absolute;
+  left: 58.4%;
+  top: 14%;
+  /* padding: 4.3% 0 0 66.3%; */
   width: 30px;
   height: 30px;
   border-radius: 17px;
@@ -112,12 +131,11 @@ h2{
 .bloc-spe{
   display: flex;
   flex-direction: column;
-  /* width: 100%; */
   margin-top: 28.2%;
-  /* margin-left: 68%; */
   padding-top: 5%;
   padding-left: 15px;
-  border: 1px solid black;
+  padding-right: 15px;
+  border-left: 1px solid black;
 
 }
 
@@ -125,6 +143,19 @@ h2{
 .nom-carte{
   border-bottom: 1px solid black;
   font-family: 'Pokemon Solid';
+}
+
+.nameInputText, .pvInputNb{
+  padding: 5px;
+  margin:  0 25px 10px 0;
+  border-radius: 10px;
+  border: 2px solid grey;
+  float: right;
+}
+
+.nameInputText:focus, .pvInputNb:focus{
+  border: 2px solid #ED1C24;
+  outline: none;
 }
 
 
