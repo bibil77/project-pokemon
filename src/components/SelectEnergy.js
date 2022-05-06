@@ -37,6 +37,7 @@ export default function SelectEnergy(props){
     return(
         <Select options={options}
         onChange={(e) => {props.setEnergyBall(e.value)}}
+        className={props.className}
         />
     )
 }

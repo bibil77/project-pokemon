@@ -15,8 +15,9 @@
   /* width: 25%; */
 }
 
+/* ########### CENTER SECTION ########################################################################################"" */
 .centerSection{
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   flex: 0.5;
   /* width: 50%; */
   display: flex;
@@ -29,36 +30,36 @@
   background-image: url(./assets/img/firePokemonCard.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
-  /* position: relative; */
-  /* z-index: 3; */
   background-color: aqua;
   margin-top: 60px;
-  height: 75%;
-  width: 45%;
+  /* height: 75%; */
+  /* width: 45%; */
+  width: 345.6px;
+  height: 535.2px;
 }
 
+.energyBall{
+  width: 30px;
+  height: 30px;
+  border-radius: 17px;
+}
+
+/* ---------- HEADER CARD -------------------------------------------------------------------------------- */
 .headerCardMain{
   display: flex;
-  /* background-color: aliceblue; */
-  /* opacity: 0.3; */
-  height: 13.5%;
+  height: 10.3%;
 }
 
 
 .cardName{
   width: 35%;
-  /* position: relative; */
   margin: 4.9% 0 0 23.5%;
-  /* left: 20%; */
-  /* padding: 4.9% 0 0 23.5%; */
   font-size: 20px;
 }
 
 .pPv{
   position: relative;
-  /* margin: 0; */
-  margin: 5.5% 0 0 16%;
-  /* padding: 4.9% 0 0 20%; */
+  margin: 5.5% 0 0 15.5%;
   font-size: 17px;
 }
 
@@ -69,23 +70,70 @@
 .EnergyBallType{
   position: absolute;
   left: 58.4%;
-  top: 14%;
-  /* padding: 4.3% 0 0 66.3%; */
-  width: 30px;
-  height: 30px;
-  border-radius: 17px;
+  top: 10.5%;
+}
+/* --------------------------------------------------------------------------------- */
+
+/* ------- CENTER OF CARD (IMG) -------------------------------------------------------------------------- */
+.imgCenterMainCard{
+  margin-left: 9%;
+  width: 82.2%;
+  height: 34.6%;
+}
+/* --------------------------------------------------------------------------------------- */
+
+/* ---------- DIV ATTACK--------------------------------------------------------------------------- */
+.divAtk{
+  margin-top: 12px;
+  height: 158px;
 }
 
-.imgCenterMainCard{
-  position: absolute;
-  z-index: 1;
-  /* height: 70%; */
-  /* width: 100%; */
+.attack1{
+  display: flex;
+  padding: 62px 0 0 15px; 
+  color: aliceblue;
 }
+
+.energyBallTypeAtk{
+  margin: 5px 0 0 0;
+}
+
+.attackName{
+  margin-right: 5px;
+ font-size: 15;
+ font-weight: bold;
+}
+.attackDesc{
+  margin: 0 0 0 5px;
+  font-size: 12px;
+  overflow-wrap: break-word;
+  /* padding: 0 0 5px 5px; */
+}
+
+.attack2{
+  display: flex;
+  margin-top: -8px;
+  padding: 0 0 0 15px; 
+  color: aliceblue;
+}
+
+
+.damage1{
+  float: right;
+}
+
+.cardFooter{
+  background-color: aqua;
+  opacity: 0.5;
+  height: 63.8px;
+}
+
 
 .divCenterBtnDown{
   background-color: brown;
 }
+
+
 
 
 /* #################### RIGHT SECTION ##################################################################################################### */
@@ -93,35 +141,19 @@
   flex: 0.25;
   /* width: 25%; */
   /* width: 384px; */
-  background-color: bisque;
+  /* background-color: bisque; */
   overflow-y: scroll;
 }
 
-/* .titre-droite{ */
-  /* position: fixed; */
-  /* width: 100%; */
-  
-  /* text-align: center; */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* margin-left: 68%; */
-  /* border: 1px solid black; */
-  /* background-color: #ED1C24; */
-  /* font-family: 'Pokemon Solid'; */
-  /* width: 72vh; */
-  /* height: 15%; */
-  /* align-items: center; */
-/* } */
-
 .titre-droite{
   position: fixed;
+  z-index: 5;
   height: 15%;
   width: 25%;
   text-align: center;
   background-color: #ED1C24;
   font-family: 'Pokemon Solid';
   border: 1px solid black;
-  /* padding: 10% 0 10% 0; */
 }
 
 h2{
@@ -145,11 +177,12 @@ h2{
   font-family: 'Pokemon Solid';
 }
 
-.nameInputText, .pvInputNb{
+.nameInputText, .pvInputNb, .inputImage{
   padding: 5px;
-  margin:  0 25px 10px 0;
+  margin-right: 25px;
+  margin-bottom: 10px;
   border-radius: 10px;
-  border: 2px solid grey;
+  /* border: 2px solid grey; */
   float: right;
 }
 
@@ -158,7 +191,7 @@ h2{
   outline: none;
 }
 
-
+/* ------------- MODIFICATION DE CARTE------------------------------------- */
 .pv-right-section{
   border-bottom: 1px solid black;
   font-family: 'Pokemon Solid';
@@ -166,16 +199,58 @@ h2{
 
 
 .type-pokemon{
+  padding-bottom: 10px;
   border-bottom: 1px solid black;
   font-family: 'Pokemon Solid';
 }
 
+.image{
+  border-bottom: 1px solid black;
+  font-family: 'Pokemon Solid';
+}
 
 .atk{
   border-bottom: 1px solid black;
   font-family: 'Pokemon Solid';
 }
 
+.containerInputAtk{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.atkInputMargin{
+  margin-top: 10px;
+}
+
+.dmgInput{
+  width: 40px;
+}
+
+/* ----- BAS DE CARTE ---------------------------------------------------------- */
 .bas-carte{
   font-family: 'Pokemon Solid';
+}
+
+.downPageTitle{
+  text-align: end;
+  margin-right: 25px;
+  font-weight: bold;
+}
+
+.divWeakness, .divResistance{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  margin-right: 25px;
+}
+
+.divRetreat{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-right: 25px;
 }
