@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import html2canvas from 'html2canvas';
 
 // importation des composant 
@@ -20,7 +20,10 @@ import waterEnergyBall from './assets/img/energyBall/water.jpg'
 // ajout d'une police spécial
 <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet"></link>
 
+
 function App() {
+  document.title = "Pokemon Card Creator"
+ 
   // variale composant
   const [number, setNumber] = useState(0)
   const [text, setText] = useState("text")
