@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Select from 'react-select'
 
-// importation du style.css
-import './cssComponents/SelectEnergy.css'
+// // importation du style.css
+// import './cssComponents/SelectEnergy.css'
 
 //importation des EnergyBalls
 import fireEnergyBall from '../assets/img/energyBall/Fire Pokemon.jpg'

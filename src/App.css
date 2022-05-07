@@ -10,20 +10,50 @@
 }
 /* ########### LEFT SECTION ####################################################################### */
 .leftSection{
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
+  /* width: 25%; */
   flex: 0.25;
+  border-right: 2px solid black;
+  padding-right: 3px;
+}
 
+.divTitle{
+  position: fixed;
+  height: 70px;
+  width: 25%;
+  background-color: #ED1C24;
+  border: 2px solid black;
+  border-top: 0px;
+  text-align: center;
+  font-family: 'Pokemon Solid';
+}
+
+.divTitleSave{
+  border-top: 2px solid black;
+}
+
+
+
+.templateContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 70px;
+  /* background-color: aqua; */
 }
 /* ######################################################################################################" */
 
 /* ########### CENTER SECTION ########################################################################################"" */
 .centerSection{
   /* background-color: blueviolet; */
+  /* width: 50%; */
   flex: 0.5;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
 }
 
 .divHeaderCenter{
@@ -44,7 +74,7 @@
 }
 
 .mainCarteDiv{
-  background-image: url(./assets/img/firePokemonCard.jpg);
+  /* background-image: url(./assets/img/firePokemonCard.jpg); */
   background-repeat: no-repeat;
   background-size: 100%;
   background-color: aqua;
@@ -76,6 +106,7 @@
 .pPv{
   position: relative;
   margin: 5.5% 0 0 15.5%;
+  width: 42.84px;
   font-size: 17px;
 }
 
@@ -84,9 +115,8 @@
 }
 
 .EnergyBallType{
-  position: absolute;
-  left: 58.4%;
-  top: 10.5%;
+  position: relative;
+  margin: 16px 0 0 0;
 }
 /* --------------------------------------------------------------------------------- */
 
@@ -185,7 +215,7 @@
 .btnRandom{
   cursor: pointer;
   margin-top: 10px;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 50%;
   background-color: #ED1C24;
 }
@@ -202,32 +232,33 @@
 .titre-droite{
   position: fixed;
   z-index: 5;
-  height: 15%;
+  height: 70px;
   width: 25%;
   text-align: center;
   background-color: #ED1C24;
   font-family: 'Pokemon Solid';
-  border: 1px solid black;
+  border: 2px solid black;
+  border-top: 0px;
 }
 
 h2{
-  margin: 0;
+  margin: 5% 0;
 }
 
 .bloc-spe{
   display: flex;
   flex-direction: column;
-  margin-top: 28.2%;
+  margin-top: 70px;
   padding-top: 5%;
   padding-left: 15px;
   padding-right: 15px;
-  border-left: 1px solid black;
+  border-left: 2px solid black;
 
 }
 
 
 .nom-carte{
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
   font-family: 'Pokemon Solid';
 }
 
@@ -247,24 +278,24 @@ h2{
 
 /* ------------- MODIFICATION DE CARTE------------------------------------- */
 .pv-right-section{
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
   font-family: 'Pokemon Solid';
 }
 
 
 .type-pokemon{
   padding-bottom: 10px;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
   font-family: 'Pokemon Solid';
 }
 
 .image{
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
   font-family: 'Pokemon Solid';
 }
 
 .atk{
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
   font-family: 'Pokemon Solid';
 }
 
@@ -297,7 +328,7 @@ h2{
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
   margin-bottom: 10px;
   margin-right: 25px;
 }

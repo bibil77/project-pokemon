@@ -7,22 +7,25 @@ import html2canvas from 'html2canvas';
 import Text from './components/Text';
 import TextNb from './components/TextNb';
 import UploadImages from './components/UploadImages';
+import Template from './components/Template';
 
 // importation d'image
 import firePokemonCard from './assets/img/firePokemonCard.jpg'
+import naturePokemonCard from './assets/img/naturePokemonCard.jpg'
 import SelectEnergy from './components/SelectEnergy';
 import SelectEnergyMulti from './components/SelectEnergyMulti';
 import fireEnergyBall from './assets/img/energyBall/Fire Pokemon.jpg'
 import waterEnergyBall from './assets/img/energyBall/water.jpg'
-import { getSuggestedQuery } from '@testing-library/react';
 
 // ajout d'une police spécial
 <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet"></link>
 
 function App() {
+  // variale composant
   const [number, setNumber] = useState(0)
   const [text, setText] = useState("text")
   const [energyBall, setEnergyBall] = useState(fireEnergyBall)
+  const [background, setBackground] = useState(firePokemonCard)
 
   // variable attack1
   const [atk1EnergyBall, setAtk1EnergyBall] = useState(fireEnergyBall)
@@ -80,7 +83,28 @@ function App() {
 {/* #################### LEFT SECTION #################################################### */}
       {/* section de gauche contenant les template et carte recente */}
       <section className='leftSection'>
-        
+
+        {/* title template */}
+        <div className='divTitleTemplate divTitle'>
+          <h2 className='titleTemplate'>Template</h2>
+        </div>
+
+
+        {/* container de template */}
+        <div className='templateContainer'>
+          <Template src={firePokemonCard} setBackground={setBackground} template={firePokemonCard} />
+          <Template src={naturePokemonCard} setBackground={setBackground} template={naturePokemonCard} />
+          <Template src={firePokemonCard} setBackground={setBackground} template={firePokemonCard} />
+          <Template src={naturePokemonCard} setBackground={setBackground} template={naturePokemonCard} />
+          <Template src={firePokemonCard} setBackground={setBackground} template={firePokemonCard} />
+          <Template src={naturePokemonCard} setBackground={setBackground} template={naturePokemonCard} />
+        </div>
+
+        {/* title cartes sauvegardés */}
+        <div className='divTitleSave divTitle'>
+          <h2 className='titleTemplate'>Cartes sauvegardés</h2>
+        </div>
+
       </section>
 {/* ########################################################################################################### */}
 
@@ -94,7 +118,7 @@ function App() {
           <img className='imgHeaderCenter iconPartage' src="https://img.icons8.com/fluency-systems-regular/56/000000/share.png"/>
           <img className='imgHeaderCenter iconDownload' onClick={downloadImage} src="https://img.icons8.com/pastel-glyph/64/000000/download--v1.png"/>
         </div>
-        <div className='mainCarteDiv' ref={printRef}>
+        <div className='mainCarteDiv' ref={printRef} style={{backgroundImage: `url(${background})`}}>
 
           {/* header de la carte contenant le nom, pv et type d'énergie de la carte */}
           <div className='headerCardMain'>
