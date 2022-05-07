@@ -80,8 +80,7 @@ function App() {
 {/* #################### LEFT SECTION #################################################### */}
       {/* section de gauche contenant les template et carte recente */}
       <section className='leftSection'>
-        section gauche
-        <input type="file" />
+        
       </section>
 {/* ########################################################################################################### */}
 
@@ -91,6 +90,10 @@ function App() {
       <section className='centerSection'>
 
         {/* div contenant la carte */}
+        <div className='divHeaderCenter'>
+          <img className='imgHeaderCenter iconPartage' src="https://img.icons8.com/fluency-systems-regular/56/000000/share.png"/>
+          <img className='imgHeaderCenter iconDownload' onClick={downloadImage} src="https://img.icons8.com/pastel-glyph/64/000000/download--v1.png"/>
+        </div>
         <div className='mainCarteDiv' ref={printRef}>
 
           {/* header de la carte contenant le nom, pv et type d'énergie de la carte */}
@@ -127,14 +130,33 @@ function App() {
 
           {/* div contenant le footer de la carte */}
           <div className='cardFooter'>
-            <img src={weakness} className="energyBall " />
+
+            {/* div card weakness */}
+            <div className='divCardWeakness'>
+              <img src={weakness} className="energyBallFooter " />
+              <p className='pCardWeakness'>X   {weaknessNb}</p>
+            </div>
+
+            {/* div resistance and retreat */}
+            <div className='divContainerRR'>
+              <div className='divCardResistance'>
+                <img src={resistance} className="energyBallFooter " />
+                <p className='pCardResistance'>X  {resistanceNb}</p>
+              </div>
+
+              <div className='divCardRetreat'>
+                <img src={retreat} className="energyBallFooter " />
+                <p className='pCardRetreat'>X  {retreatNb}</p>
+              </div>
+            </div>
           </div>
         </div>
+{/* ################################################################################################## */}
+
 
         {/* div contenant les boutons de partage et d'enregistrement*/}
         <div className='divCenterBtnDown'>
-          div bas centre
-          <button type='button' onClick={downloadImage}>Download as image</button>
+          <img className='btnRandom' src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-random-interface-kiranshastry-lineal-kiranshastry.png"/>
         </div>
       </section>
 

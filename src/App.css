@@ -8,22 +8,39 @@
   /* justify-content: space-between; */
   /* margin: 0 50% 0 50%; */
 }
-
+/* ########### LEFT SECTION ####################################################################### */
 .leftSection{
   background-color: aquamarine;
   flex: 0.25;
-  /* width: 25%; */
+
 }
+/* ######################################################################################################" */
 
 /* ########### CENTER SECTION ########################################################################################"" */
 .centerSection{
   /* background-color: blueviolet; */
   flex: 0.5;
-  /* width: 50%; */
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
+  background-color: blueviolet;
+}
+
+.divHeaderCenter{
+  width: 100%;
+}
+
+.imgHeaderCenter{
+  float: right;
+  cursor: pointer;
+}
+
+.iconPartage{
+  margin: 5px 30px 0 0;
+}
+
+.iconDownload{
+  margin-right: 10px;
 }
 
 .mainCarteDiv{
@@ -32,10 +49,9 @@
   background-size: 100%;
   background-color: aqua;
   margin-top: 60px;
-  /* height: 75%; */
-  /* width: 45%; */
+  border-radius: 17px;
   width: 345.6px;
-  height: 535.2px;
+  height: 485px;
 }
 
 .energyBall{
@@ -77,14 +93,14 @@
 /* ------- CENTER OF CARD (IMG) -------------------------------------------------------------------------- */
 .imgCenterMainCard{
   margin-left: 9%;
-  width: 82.2%;
-  height: 34.6%;
+  width: 82.5%;
+  height: 39.2%;
 }
 /* --------------------------------------------------------------------------------------- */
 
 /* ---------- DIV ATTACK--------------------------------------------------------------------------- */
 .divAtk{
-  margin-top: 12px;
+  margin-top: 13px;
   height: 158px;
 }
 
@@ -123,18 +139,56 @@
 }
 
 .cardFooter{
-  background-color: aqua;
-  opacity: 0.5;
   height: 63.8px;
 }
 
-
-.divCenterBtnDown{
-  background-color: brown;
+/* -------- CARD FOOTER---------------------------------------- */
+.energyBallFooter{
+  width: 15px;
+  height: 15px;
+  border-radius: 17px;
+  margin: 12px 0 0 30px;
+}
+.divCardWeakness{
+  display: flex;
 }
 
+.pCardWeakness{
+  font-size: 10px;
+  margin: 12.5px 0 0 3.5px;
+}
 
+.divContainerRR{
+  display: flex;
+  font-size: 10px;
+  margin-top: 3px;
+}
 
+.divCardRetreat{
+  display: flex;
+}
+
+.divCardResistance{
+  display: flex;
+  width: 130px;
+}
+
+.pCardResistance, .pCardRetreat{
+  margin: 12.5px 0 0 3.5px;
+}
+/* ###############################################################################################################" */
+
+/* .divCenterBtnDown{
+  background-color: brown;
+} */
+/* btn random */
+.btnRandom{
+  cursor: pointer;
+  margin-top: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: #ED1C24;
+}
 
 /* #################### RIGHT SECTION ##################################################################################################### */
 .rightSection{
