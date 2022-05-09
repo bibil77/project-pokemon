@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, useReducer } from 'react';
 import html2canvas from 'html2canvas';
 
 // importation des composant 
@@ -8,6 +8,7 @@ import Text from './components/Text';
 import TextNb from './components/TextNb';
 import UploadImages from './components/UploadImages';
 import Template from './components/Template';
+import Save from './components/Save';
 
 // importation d'image
 import firePokemonCard from './assets/img/firePokemonCard.jpg'
@@ -25,10 +26,10 @@ function App() {
   document.title = "Pokemon Card Creator"
  
   // variale composant
-  const [number, setNumber] = useState(0)
-  const [text, setText] = useState("text")
-  const [energyBall, setEnergyBall] = useState(fireEnergyBall)
-  const [background, setBackground] = useState(firePokemonCard)
+  const [number, setNumber] = useState(0) // number of PV
+  const [text, setText] = useState("text") //name of card
+  const [energyBall, setEnergyBall] = useState(fireEnergyBall) //energy type of card
+  const [background, setBackground] = useState(firePokemonCard) // card template
 
   // variable attack1
   const [atk1EnergyBall, setAtk1EnergyBall] = useState(fireEnergyBall)
@@ -50,7 +51,8 @@ function App() {
   const [retreat, setRetreat] = useState(fireEnergyBall)
   const [retreatNb, setRetreatNb] = useState(0)
 
-
+  // variable de save
+  
 
   // const [energyBallMulti, setEnergyBallMulti] = useState([])
 
@@ -107,6 +109,14 @@ function App() {
         <div className='divTitleSave divTitle'>
           <h2 className='titleTemplate'>Cartes sauvegardés</h2>
         </div>
+          <Save className={"save"}
+           
+           pv={number} name={text} energyBall={energyBall} background={background} 
+           atk1EnergyBall={atk1EnergyBall} attackName1={attackName1} attackDesc1={attackDesc1} damage1={damage1}
+           atk2EnergyBall={atk2EnergyBall} attackName2={attackName2} attackDesc2={attackDesc2} damage2={damage2}
+           weakness={weakness} weaknessNb={weaknessNb}
+           resistance={resistance} resistanceNb={resistanceNb}
+           retreat={retreat} retreatNb={retreatNb} />
 
       </section>
 {/* ########################################################################################################### */}
